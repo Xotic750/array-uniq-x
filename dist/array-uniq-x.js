@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-14T22:33:43.018Z",
+  "date": "2019-08-14T22:35:23.948Z",
   "describe": "",
   "description": "Creates a duplicate-free version of an array, using SameValue for equality comparisons.",
   "file": "array-uniq-x.js",
