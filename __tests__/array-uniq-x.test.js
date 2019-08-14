@@ -1,4 +1,4 @@
-import uniq from '../src/array-unique-x';
+import uniq from '../src/array-uniq-x';
 
 describe('uniq', function() {
   it('is a function', function() {

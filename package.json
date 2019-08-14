@@ -1,8 +1,8 @@
 {
-  "name": "array-unique-x",
+  "name": "array-uniq-x",
   "version": "1.0.0",
   "description": "Creates a duplicate-free version of an array, using SameValue for equality comparisons.",
-  "homepage": "https://github.com/Xotic750/array-unique-x",
+  "homepage": "https://github.com/Xotic750/array-uniq-x",
   "author": {
     "name": "Graham Fairweather",
     "email": "xotic750@gmail.com"
@@ -20,11 +20,11 @@
     "dist",
     "src"
   ],
-  "module": "dist/array-unique-x.esm.js",
-  "main": "dist/array-unique-x.js",
-  "jsdelivr": "dist/array-unique-x.min.js",
+  "module": "dist/array-uniq-x.esm.js",
+  "main": "dist/array-uniq-x.js",
+  "jsdelivr": "dist/array-uniq-x.min.js",
   "scripts": {
-    "build:esm": "mkdirp dist && babel -s true --env-name esm src/array-unique-x.js -o dist/array-unique-x.esm.js",
+    "build:esm": "mkdirp dist && babel -s true --env-name esm src/array-uniq-x.js -o dist/array-uniq-x.esm.js",
     "build:base": "webpack --bail --progress --profile --colors",
     "build": "npm run build:esm && cross-env NODE_ENV=production npm run build:base --",
     "build:dev": "npm run build:base --",
@@ -45,10 +45,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Xotic750/array-unique-x.git"
+    "url": "https://github.com/Xotic750/array-uniq-x.git"
   },
   "bugs": {
-    "url": "https://github.com/Xotic750/array-unique-x/issues"
+    "url": "https://github.com/Xotic750/array-uniq-x/issues"
   },
   "dependencies": {
     "array-reduce-x": "^3.1.0",
