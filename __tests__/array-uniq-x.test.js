@@ -30,9 +30,14 @@ describe('uniq', function() {
     expect(uniq({0: 1, 1: 2, 2: 3, 3: 1, 4: 2, 5: 3, length: 6})).toStrictEqual([1, 2, 3]);
   });
 
-  it('zeros', function() {
+  it('zeros SameValueZero', function() {
     expect.assertions(1);
-    expect(uniq([-0, 0])).toStrictEqual([-0, 0]);
+    expect(uniq([-0, 0])).toStrictEqual([0]);
+  });
+
+  it('zeros SameValue', function() {
+    expect.assertions(1);
+    expect(uniq([-0, 0], true)).toStrictEqual([-0, 0]);
   });
 
   it('should perform an unsorted uniq when used as an iteratee for methods like `map`', function() {

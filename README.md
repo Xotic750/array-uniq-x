@@ -46,7 +46,7 @@
 
 ## array-uniq-x
 
-Creates a duplicate-free version of an array, using SameValue for equality comparisons,
+Creates a duplicate-free version of an array, using SameValueZero for equality comparisons,
 in which only the first occurrence of each element is kept. The order of result values is
 determined by the order they occur in the array.
 
@@ -59,9 +59,10 @@ This method is just a placeholder.
 **Kind**: Exported member  
 **Returns**: <code>Array</code> - Returns the new duplicate free array.
 
-| Param | Type               | Description           |
-| ----- | ------------------ | --------------------- |
-| array | <code>Array</code> | The array to inspect. |
+| Param          | Type                 | Description             |
+| -------------- | -------------------- | ----------------------- |
+| array          | <code>Array</code>   | The array to inspect.   |
+| [useSameValue] | <code>Boolean</code> | Alternative comparison. |
 
 **Example**
 
@@ -69,4 +70,6 @@ This method is just a placeholder.
 import uniq from 'array-uniq-x';
 
 console.log(uniq([2, 1, 2])); // [2, 1]
+console.log(uniq([-0, 0])); // [0]
+console.log(uniq([-0, 0], true)); // [-0, 0]
 ```

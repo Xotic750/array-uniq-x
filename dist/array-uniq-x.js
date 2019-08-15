@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-14T22:40:07.796Z",
+  "date": "2019-08-15T20:27:10.945Z",
   "describe": "",
-  "description": "Creates a duplicate-free version of an array, using SameValue for equality comparisons.",
+  "description": "Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.",
   "file": "array-uniq-x.js",
-  "hash": "40ae2eccefaa644477a5",
+  "hash": "05d5a65cbaeaf057dcba",
   "license": "MIT",
   "version": "1.0.0"
 }
@@ -2309,27 +2309,28 @@ var index_of_x_esm_indexOf = function indexOf(array, searchElement) {
 // CONCATENATED MODULE: ./dist/array-uniq-x.esm.js
 
 
+
 var push = [].push;
-
-var array_uniq_x_esm_callback = function callback(accumulator, currentValue) {
-  if (index_of_x_esm(accumulator, currentValue, 'SameValue') === -1) {
-    push.call(accumulator, currentValue);
-  }
-
-  return accumulator;
-};
 /**
- * Creates a duplicate-free version of an array, using SameValue for equality comparisons,
+ * Creates a duplicate-free version of an array, using SameValueZero for equality comparisons,
  * in which only the first occurrence of each element is kept. The order of result values is
  * determined by the order they occur in the array.
  *
  * @param {Array} array - The array to inspect.
+ * @param {boolean} [useSameValue] - If true the use SameValue instead of SameValueZero.
  * @returns {*} Returns the new duplicate free array.
  */
 
+var array_uniq_x_esm_uniq = function uniq(array, useSameValue) {
+  var isSameValue = to_boolean_x_esm(useSameValue);
+  var type = isSameValue ? 'SameValue' : 'SameValueZero';
+  return array_reduce_x_esm(array, function iteratee(accumulator, currentValue) {
+    if (index_of_x_esm(accumulator, currentValue, type) === -1) {
+      push.call(accumulator, isSameValue === false && currentValue === 0 ? 0 : currentValue);
+    }
 
-var array_uniq_x_esm_uniq = function uniq(array) {
-  return array_reduce_x_esm(array, array_uniq_x_esm_callback, []);
+    return accumulator;
+  }, []);
 };
 
 /* harmony default export */ var array_uniq_x_esm = __webpack_exports__["default"] = (array_uniq_x_esm_uniq);
