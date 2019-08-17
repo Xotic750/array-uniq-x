@@ -1,7 +1,8 @@
 import reduce from 'array-reduce-x';
 import indexOf from 'index-of-x';
 import toBoolean from 'to-boolean-x';
-var push = [].push;
+import methodize from 'simple-methodize-x';
+var push = methodize([].push);
 /**
  * Creates a duplicate-free version of an array, using SameValueZero for equality comparisons,
  * in which only the first occurrence of each element is kept. The order of result values is
@@ -17,7 +18,7 @@ var uniq = function uniq(array, useSameValue) {
   var type = isSameValue ? 'SameValue' : 'SameValueZero';
   return reduce(array, function iteratee(accumulator, currentValue) {
     if (indexOf(accumulator, currentValue, type) === -1) {
-      push.call(accumulator, isSameValue === false && currentValue === 0 ? 0 : currentValue);
+      push(accumulator, isSameValue === false && currentValue === 0 ? 0 : currentValue);
     }
 
     return accumulator;

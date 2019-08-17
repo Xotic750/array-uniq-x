@@ -53,7 +53,8 @@
   "dependencies": {
     "array-reduce-x": "^3.1.0",
     "index-of-x": "^3.1.0",
-    "to-boolean-x": "^2.1.0"
+    "to-boolean-x": "^2.1.0",
+    "simple-methodize-x": "^1.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

@@ -1,8 +1,9 @@
 import reduce from 'array-reduce-x';
 import indexOf from 'index-of-x';
 import toBoolean from 'to-boolean-x';
+import methodize from 'simple-methodize-x';
 
-const {push} = [];
+const push = methodize([].push);
 
 /**
  * Creates a duplicate-free version of an array, using SameValueZero for equality comparisons,
@@ -21,7 +22,7 @@ const uniq = function uniq(array, useSameValue) {
     array,
     function iteratee(accumulator, currentValue) {
       if (indexOf(accumulator, currentValue, type) === -1) {
-        push.call(accumulator, isSameValue === false && currentValue === 0 ? 0 : currentValue);
+        push(accumulator, isSameValue === false && currentValue === 0 ? 0 : currentValue);
       }
 
       return accumulator;
