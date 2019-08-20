@@ -1,6 +1,6 @@
 {
   "name": "array-uniq-x",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.",
   "homepage": "https://github.com/Xotic750/array-uniq-x",
   "author": {
@@ -51,10 +51,10 @@
     "url": "https://github.com/Xotic750/array-uniq-x/issues"
   },
   "dependencies": {
-    "array-reduce-x": "^3.1.0",
-    "index-of-x": "^3.1.0",
+    "array-reduce-x": "^3.1.1",
+    "index-of-x": "^3.1.1",
     "to-boolean-x": "^2.1.0",
-    "simple-methodize-x": "^1.0.2"
+    "simple-methodize-x": "^1.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
