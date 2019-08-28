@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-28T15:43:02.446Z",
+  "date": "2019-08-28T17:44:04.477Z",
   "describe": "",
   "description": "Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.",
   "file": "array-uniq-x.js",
   "hash": "34fd6c97e7ebffe99d53",
   "license": "MIT",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
