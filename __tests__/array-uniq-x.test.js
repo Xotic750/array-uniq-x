@@ -42,9 +42,15 @@ describe('uniq', function() {
 
   it('should perform an unsorted uniq when used as an iteratee for methods like `map`', function() {
     expect.assertions(1);
-    const array = [[2, 1, 2], [1, 2, 1]];
+    const array = [
+      [2, 1, 2],
+      [1, 2, 1],
+    ];
     const actual = array.map(uniq);
 
-    expect(actual).toStrictEqual([[2, 1], [1, 2]]);
+    expect(actual).toStrictEqual([
+      [2, 1],
+      [1, 2],
+    ]);
   });
 });
